@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins&display =swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+ <title> Our Cosmetics </title>
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 100%
+  scroll-behaviour: smooth;
+}
+body{ 
+  font-family:'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/*hero section*/
+
+#hero{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#hero::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('file:///D:/downloads/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(50%);
+}
+#hero_content{
+  position: absolute;
+}
+#hero_content h1{
+  color: #fff;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 2px #000;
+}
+#hero_content h2{
+  color: #fff;
+  font-size: 2rem;
+  font-family: cursive;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+ text-shadow: 2px 2px 2px #000;
+}
+#hero_content a{
+  color: #fff;
+  padding: 3px 20px 3px 20px;
+  border: 1px solid pink;
+  background: rgb(_0,0,0,0.6);
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+}
+#hero_content a:hover{
+  background: dodgerblue;
+} 
+
+/*header section*/
+
+#header{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  line-height: 70px;
+}
+#navbar{
+  display: flex;
+  justify-content: space-around;
+  background: rgb(0,0,0,0.5);
+}
+#navbar h1{
+  color: pink;
+  font-size: 1.8;
+  text-shadow: 2px 2px 2px #000;
+  font-family: cursive;
+}
+#navbar ul{
+  display: flex;
+}
+#navbar ul li{
+  list-style: none;
+  padding: 3px 15px 3px 15px;
+}
+#navbar ul li:hover,#phone a:hover,#mobile_menu ul li:hover{
+  background: dodgerblue;
+  cursor: pointer;
+}
+#navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  font size: 1.1rem;
+}
+#phone a{
+  text-decoration: none;
+  color: #fff;
+  font size: 1.1rem;
+  padding: 3px 15px 3px 15px;
+  border: 1px solid pink;
+}
+#mobile_menu{
+  display: none;
+  height: 40px;
+  line-height: 40px;
+  background-color:  pink;
+}
+#mobile_menu ul{
+  display: flex;
+  justify-content: center;
+}
+#mobile_menu ul li{
+  list-style: none;
+  padding: 0 5px 0 5px;
+}
+#mobile_menu ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*product section*/
+
+#product{
+  padding:25px 0 25px 0;
+}
+#section{
+  padding:25px 0 25px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-family: verdana;
+}
+#product_row{
+  display: flex;
+  padding: 0 100px 0 100px;
+}
+#product_col{
+  box-shadow: 2px 2px 2px #bbb;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+}
+#product_col h2{
+  background-color: pink;
+  text-align: center;
+  padding: 10px;
+  font-family: cursive;
+  font-size: 2rem; 
+}
+#image{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid pink;
+} 
+#image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+} 
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
+/*about section*/
+
+#about{
+   padding: 25px 25px 25px 25px;
+}
+#about_row{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   padding:  100px 100px;
+}
+#about_col{
+   flex: 1;
+}
+#about_img{
+   width: 300px;
+   height: 300px;
+   border-radius: 75%;
+   margin: auto;
+}
+#about img{
+   width: 100%;
+   height: 100%;
+   border-radius: 75%;
+   object-fit: fill;
+   border-style: double;
+}
+#about_col h1{
+   text-align: center;
+   font-family: cursive;
+   font-weight: bold;
+   
+}
+#about_col p{
+   text-align: justify;
+   
+   font-size: 2rem;
+}
+
+/*contact section*/
+
+#contact us{
+       padding: 25px 0 25px 0;
+ }
+#contact_row{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0 100px 0 100px;
+       flex-wrap: wrap;
+       font-weight: bold;
+       font-size: 1.5rem;
+ }
+.contact_col{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       flex: 1;
+       
+ }
+.contact_col p,h3{
+       font-weight: bold;
+       color: #292929;
+       margin: 10px;
+ }
+.contact_col p a{
+       text-decoration: none;
+       color:#292929;
+      
+ }
+#social a{
+       color: dodgerblue;
+       margin: 3px;
+ }
+.contact_col form{
+       display: flex;
+       border-style: double;
+       flex-direction: column;
+       background-color: pink;
+       width: 70%;
+       padding: 20px 40px 20px 20px;
+ }
+.contact_col form h2{
+      text-align: center;
+      font-family: cursive;
+ }
+.contact_col form input{
+      width: 100%;
+      height: 17pt;
+      padding: 5px;
+      margin: 5px;
+ }
+.contact_col form textarea{
+      width: 100%;
+      padding: 5px;
+      margin: 5px;
+ }
+.contact_col form button{
+  margin: auto;
+  padding: 10px;
+  color: #fff;
+  background-color: dodgerblue;
+  border: 1px solid pink;
+  cursor: pointer;
+}
+
+/*footer section*/
+
+#footer{
+  background-color: #292929;
+  padding: 20px;
+  position: relative;
+}
+#footer h5{
+ text-align: center;
+ color: pink;
+}
+#footer h5 a{
+  color: #fff;
+  text-decoration: none;
+}
+#top{
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+#top a{
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+ #mobile_menu{
+     display: block;
+}
+ #navbar ul{
+    display: none;
+}
+ html{
+    font-size: 95%;
+}
+ #product_row, #about_row{
+    flex-wrap: wrap; 
+    padding: 0 10px 0 10px;
+}
+ 
+@media screen and (max-width: 360px){
+ html{
+    font-size: 70%;
+}
+ #about_img{
+   width: 220px;
+   height: 220px;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<!--hero.section.begin--!>
+
+<div id="hero">
+  <div id="hero_content">
+    <h1>Our Cosmetics</h1>
+    <h2>Best Quality at Best Prices</h2>
+    <a href="#Products">Products</a>
+  </div>
+</div>
+<div id="header">
+  <nav id="navbar">
+    <h1>Our Cosmetics</h1>
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="#Products">Products</a></li>
+       <li><a href="#About us">About us</a></li>
+       <li><a href="#Contact us">Contact us</a></li>
+    </ul>
+    <div id="phone">
+       <a href="tel:+9056637018">+9056637018</a>
+    </div>
+  </nav>
+  <div id="mobile_menu">
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="#Products">Products</a></li>
+       <li><a href="#About us">About us</a></li>
+       <li><a href="#Contact us">Contact us</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--hero section end--!>
+
+<!--Products Section begin--!>
+
+ <div id="Products">
+  <h1 id="section">Products</h1>
+  <div id="product_row">
+      <div id="product_col">
+         <h2>Face</h2>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image">
+           </div>
+           <div>
+             <h3>Foundation</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image2">
+           </div>
+           <div>
+             <h3>Primer</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image3">
+           </div>
+           <div>
+             <h3>Concealer</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+      </div>
+      <div id="product_col">
+         <h2>Eyes</h2>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image4">
+           </div>
+           <div>
+             <h3>Eyeliner</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/images5">
+           </div>
+           <div>
+             <h3>Mascara</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image6">
+           </div>
+           <div>
+             <h3>Eyeshadow</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+      </div>
+      <div id="product_col">
+         <h2>Lips</h2>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image8">
+           </div>
+           <div>
+             <h3>Lipstick</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/images9">
+           </div>
+           <div>
+             <h3>Lipbalm</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image7">
+           </div>
+           <div>
+             <h3>Lipliner</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+      </div>
+      <div id="product_col">
+         <h2>Hair</h2>
+         <div class="box">
+           <div id="image">
+            <img src="file:///C:/Users/Welcome/OneDrive/image10">
+           </div>
+           <div>
+             <h3>Shampoo</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image11">
+           </div>
+           <div>
+             <h3>Conditioner</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+         <div class="box">
+           <div id="image">
+             <img src="file:///C:/Users/Welcome/OneDrive/image12">
+           </div>
+           <div>
+             <h3>Serum</h3>
+             <h4> ₹1000 </h4>
+           </div>
+         </div>
+     </div>
+  </div>   
+ </div>
+
+<!--Products Section end--!>
+
+
+<!--about section begin--!>
+
+ <div id="About us">
+   <h1 id="section">About us</h1>
+   <div id="about_row">
+      <div class="about_col"> 
+         <div id="about">
+            <img src="file:///D:/downloads/about11.jpg">
+         </div>
+      </div>
+      <div id="about_col">
+         <h1>About </h1>
+         <p> 
+                      “A cosmetic product is a substance or mixture intended to come into contact with the superficial parts of the human body  or with the teeth and the oral mucous membranes, with a view, exclusively or mainly, to clean them, to perfume them, to modify their appearance, to protect them, to keep them in good condition or to correct bodily odors”. 
+         </p>
+      </div>
+      </div>
+   </div>
+ </div>
+
+<!--about section end--!>
+
+<!--contact section begin--!>
+
+<div id="Contact us">
+    <h1 id="section">Contact us</h1>
+    <div id="contact_row">
+       <div class="contact_col">
+          <div>
+            <p>
+                <i class="fa fa-map-marker"></i>
+                Sherpur Pacca,District Hoshiarpur,Punjab
+            </p>
+            <p>
+                <a href="mailto: jasmeendhillon5911@gmail.com">
+                    <i class="fa fa-envelope"></i>
+                    jasmeendhillon5911@gmail.com
+                </a>
+            </p>
+            <p>
+                <a href="tel: 9056637018">
+                    <i class="fa fa-phone"></i>
+                    9056637018
+                </a>
+            </p>
+          </div>
+            <h2><tr>Follow Us</tr></h2>
+         <p id="social">
+            <a href="square" class="fa fa-facebook-square fa-2x"></a>
+            <a href="square" class="fa fa-twitter-square fa-2x"></a>
+            <a href="square" class="fa fa-instagram fa-2x"></a>
+            <a href="square" class="fa fa-youtube-square fa-2x"></a>
+         </p>
+       </div>
+       <div class="contact_col">   
+            <form>
+                 <h3>Get in touch</h3>
+                 <input type="text" placeholder="Name">
+                 <input type="email" placeholder="Email">
+                 <input type="text" placeholder="Subject">
+                 <textarea rows="6" placeholder="Type Message"> 
+                 </textarea>
+                 <button>Send Message</button>
+            </form>
+       </div>
+    </div>
+</div>
+
+<!--contact section end--!>
+
+<!--footer section begin--!>
+
+<div id="footer">
+    <div>
+      <h5>Copyright &copy;2024 | <a href=" ">Our cosmetic</a>
+      </h5>
+    </div>
+    <div id="top">
+      <a href="#hero"><i class="fa fa-chevron-circle-up"</i></a>
+    </div>
+</div>
+
+<!--footer section begin--!>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
